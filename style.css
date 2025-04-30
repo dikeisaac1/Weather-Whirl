@@ -18,12 +18,30 @@ body {
 .card {
   width: 100%;
   max-width: 470px;
-  background: linear-gradient(135deg, #06ffc9, #2724e6);
+  background: linear-gradient(-45deg, #1f1c2c, #2c3e50, #4b6cb7, #928dab, #1f1c2c);
+  background-size: 500% 500%;
   color: #fff;
   border-radius: 20px;
   padding: 40px 35px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  animation: gradientShift 30s ease-in-out infinite;
 }
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 .search {
   width: 100%;
@@ -72,9 +90,14 @@ body {
   font-weight: 500;
 }
 
+.weather > p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .weather h2 {
   font-size: 45px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: -10px;
 }
 
@@ -143,7 +166,6 @@ body {
         font-size: 40px;
         font-weight: 400;
       }
-
 
       .col img {
         width: 20px;
