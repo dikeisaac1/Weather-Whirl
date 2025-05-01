@@ -212,9 +212,11 @@ async function checkWeather(city) {
     }
   } catch (error) {
     console.error("Error fetching weather:", error);
-    alert(
-      "❌ An error occurred while fetching weather data. Please try again."
-    );
+    if (searchBox.value === "" || inputValue === null) {
+      document.querySelector(".error").textContent = "Input cannot be empty!";
+      document.querySelector(".error").style.display = "block";
+      document.querySelector(".weather").style.display = "none";
+    }
   }
 }
 
