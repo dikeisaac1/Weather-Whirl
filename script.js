@@ -207,7 +207,7 @@ async function checkWeather(city) {
           break;
       }
 
-      document.querySelector(".weather").style.display = "block";
+      document.querySelector(".weather").style.display = "flex";
       document.querySelector(".error").style.display = "none";
     }
   } catch (error) {
