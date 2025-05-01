@@ -47,7 +47,7 @@ async function checkWeather(city) {
       switch (description) {
         // Clear
         case "clear sky":
-          document.querySelector(".description").innerHTML = capitalizeTwoWords(data.weather[0].description)
+          document.querySelector(".description").textContent = capitalizeTwoWords(data.weather[0].description)
           weatherIcon.src = isDay()
             ? "weather-app-img/images/01d.png"
             : "weather-app-img/images/01n.png";
@@ -55,7 +55,7 @@ async function checkWeather(city) {
 
         // Clouds
         case "few clouds":
-          document.querySelector(".description").innerHTML = capitalizeTwoWords(data.weather[0].description)
+          document.querySelector(".description").textContent = capitalizeTwoWords(data.weather[0].description)
           weatherIcon.src = isDay()
             ? "weather-app-img/images/02d.png"
             : "weather-app-img/images/02d.png";
