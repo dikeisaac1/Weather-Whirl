@@ -36,7 +36,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 3em;
   animation: gradientShift 30s ease-in-out infinite;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -66,7 +66,7 @@ body {
 .search input {
   border: none;
   outline: none;
-  background-color: #ebfffc;
+  background-color: #d5f1fd;
   color: #555;
   padding: 10px 25px;
   height: 60px;
@@ -79,7 +79,7 @@ body {
 .search button {
   border: none;
   outline: none;
-  background-color: #ebfffc;
+  background-color: #d5f1fd;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -87,6 +87,10 @@ body {
   justify-content: center;
   width: 60px;
   height: 60px;
+}
+
+.search button:hover {
+  background-color: rgb(216, 216, 216);
 }
 
 .search button img {
@@ -115,11 +119,13 @@ body {
   font-size: 80px;
   font-weight: 500;
   margin-top: -10px;
+  color: #d5f1fd;
 }
 
 .weather > p {
   font-size: 14px;
   font-weight: 500;
+  color: #d5f1fd;
 }
 
 .weather h2 {
@@ -128,6 +134,7 @@ body {
   margin-top: -20px;
   margin-bottom: 10px;
   line-height: 1.2;
+  color: #d5f1fd;
 }
 
 .details {
@@ -135,6 +142,7 @@ body {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  color: #d5f1fd;
 }
 
 .col {
