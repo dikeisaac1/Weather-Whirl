@@ -182,7 +182,7 @@ body {
 
 @media (max-width: 470px) {
   .card {
-    width: 350px;
+    width: 300px;
   }
 
   /* .weather > p {
