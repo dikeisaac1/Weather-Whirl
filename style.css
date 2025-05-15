@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: auto;
-  height: 100svh;
+ min-height: 100vh;
 }
 
 .card {
@@ -62,6 +62,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .search input {
@@ -75,6 +76,27 @@ body {
   margin-right: 16px;
   font-size: 16px;
   width: 80%;
+}
+
+.cancel-icon {
+  position: absolute;
+  left: 270px;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  padding: 8px;
+  background-color: #d5f1fd;
+}
+
+.cancel-icon-visible {
+  opacity: 1;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #3498db;
 }
 
 .search button {
@@ -190,6 +212,9 @@ body {
     font-weight: 500;
   } */
 
+  .cancel-icon {
+    left: 125px;
+  }
  
   .search input {
     width: 75%;

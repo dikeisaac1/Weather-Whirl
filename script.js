@@ -2,9 +2,29 @@ const apiKey = "d8ca70c842e7944ce8701fbb9469a850";
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-const searchBox = document.querySelector(".search input");
+
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
+const searchBox = document.querySelector(".search input");
+const cancelIcon = document.querySelector(".cancel-icon");
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  searchBox.addEventListener('input', () => {
+    if (searchBox.value.length > 0) {
+      cancelIcon.classList.add("cancel-icon-visible");
+    } else {
+      cancelIcon.classList.remove("cancel-icon-visible");
+    }
+  });
+
+  cancelIcon.addEventListener('click', () => {
+    searchBox.value = ''; // Clear the input
+    cancelIcon.classList.remove("cancel-icon-visible"); // Hide the icon
+    searchBox.focus(); // Keep focus for convenience
+  });
+});
 
 async function checkWeather(city) {
   // Check internet connection before making API call
